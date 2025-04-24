@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan a Trip - PackYourPurse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f0e4d7, #f9d6a1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .trip-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff6f61;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-field label {
+            font-size: 1.1rem;
+            color: #5a3e36;
+            font-weight: bold;
+        }
+
+        .form-field input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        .form-field input:focus {
+            outline: none;
+            border-color: #ffb347;
+            box-shadow: 0 0 5px #ffb347;
+        }
+
+        .btn {
+            background: #ff9a9e;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff6f61;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="trip-container">
+        <h1>Plan Your Trip</h1>
+        <img src="images/PlanTrip.jpg" alt="Plan a Trip" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px;">
+       
+        <form id="trip-form">
+            <div class="form-field">
+                <label for="members">Number of Travelers:</label>
+                <input type="number" id="members" name="members" required placeholder="e.g., 4">
+            </div>
+
+            <div class="form-field">
+                <label for="days">Number of Days:</label>
+                <input type="number" id="days" name="days" required placeholder="e.g., 7">
+            </div>
+
+            <div class="form-field">
+                <label for="budget">Total Budget (₹):</label>
+                <input type="number" id="budget" name="budget" required placeholder="e.g., 50000">
+            </div>
+
+            <div class="form-field">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required placeholder="e.g., Goa">
+            </div>
+
+            <div class="form-field">
+                <label for="preferences">Preferences (Food, Adventure, Culture, etc.):</label>
+                <input type="text" id="preferences" name="preferences" placeholder="e.g., Food, Beaches, Shopping">
+            </div>
+
+            <button type="submit" class="btn">Generate Itinerary</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

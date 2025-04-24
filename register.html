@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register - PackYourPurse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff; /* Clean white background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #7a95b0; /* Light slate tint */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            color: #1e293b;
+        }
+
+        h1 {
+            color: #1e293b;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #475569;
+            margin-bottom: 30px;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-field label {
+            color: #334155;
+            font-weight: bold;
+        }
+
+        .form-field input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #36475f;
+            background-color: #ffffff;
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+
+        .form-field input:focus {
+            outline: none;
+            border-color: #38bdf8;
+            box-shadow: 0 0 5px #38bdf8;
+        }
+
+        .btn {
+            background: #36475f;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        p span {
+            font-weight: bold;
+            color: #3888f86d;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h1>Create Your Account</h1>
+        <h2>Join PackYourPurse to plan your next trip!</h2>
+
+        <form id="register-form">
+            <div class="form-field">
+                <label for="name">Full Name :</label><br>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name"><br><br>
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Phone Number :</label><br>
+                <input type="number" id="phone" name="phone" required placeholder="Enter your phone number"><br><br>
+            </div>
+
+            <div class="form-field">
+                <label for="gmail">Email :</label><br>
+                <input type="email" id="gmail" name="gmail" required placeholder="Enter your Gmail address"><br><br>
+            </div>
+
+            <div class="form-field">
+                <label for="password">Password :</label><br>
+                <input type="password" id="password" name="password" required placeholder="Enter your password"><br><br>
+            </div>
+
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password :</label><br>
+                <input type="password" id="confirm-password" name="confirm-password" required
+                    placeholder="Confirm your password"><br><br>
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <p>Already have an account? <span>Login here</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

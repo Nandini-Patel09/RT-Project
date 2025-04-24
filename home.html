@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PackYourPurse - Travel Expense Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8fafc; /* light slate background */
+            color: #2f3e46;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header {
+            background: #475569; /* Slate blue */
+            padding: 30px;
+            text-align: center;
+            border-bottom: 4px solid #334155; /* Darker slate for contrast */
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            margin-top: 10px;
+            color: #f1f5f9;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .intro p {
+            font-size: 1.4rem;
+            color: #e2e8f0; /* light slate gray */
+            margin: 10px auto;
+            max-width: 700px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav ul li {
+            padding: 15px 25px;
+            background: #334155; /* Deep slate blue */
+            color: #f8fafc;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li:hover {
+            background: #64748b; /* Hover slate tone */
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="intro">
+            <h1>Welcome to PackYourPurse</h1>
+            <p>Your personalized travel assistant for managing travel budgets and finding the best places to stay, eat, and explore!</p>
+        </section>
+
+        <nav>
+            <ul>
+                <li onclick="window.location.href='login.html'">Login</li><br>
+                <li onclick="window.location.href='register.html'">Register</li><br>
+                <li onclick="window.location.href='PlanTrip.html'">Plan a Trip</li><br>
+                <li onclick="window.location.href='expensemanager.html'">Expense Manager</li><br>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
+

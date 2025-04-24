@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Manager - PackYourPurse</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ebedf0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .expense-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #7a95b0;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #334155;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-field label {
+            font-size: 1.1rem;
+            color: #475569;
+            font-weight: bold;
+        }
+
+        .form-field input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+            background: white;
+        }
+
+        .form-field input:focus {
+            outline: none;
+            border-color: #0ea5e9;
+            box-shadow: 0 0 5px #0ea5e9;
+        }
+
+        .btn {
+            background: #0ea5e9;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0284c7;
+        }
+
+        #total-output {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0ea5e9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="expense-container">
+        <h1>Manage Your Travel Expenses</h1>
+       
+        <form id="expense-form">
+            <div class="form-field">
+                <label for="travel">Travel Expense (₹):</label>
+                <input type="number" id="travel" name="travel">
+            </div>
+
+            <div class="form-field">
+                <label for="food">Food Expenses (₹):</label>
+                <input type="number" id="food" name="food" required>
+            </div>
+
+            <div class="form-field">
+                <label for="shopping">Shopping Expenses (₹):</label>
+                <input type="number" id="shopping" name="shopping">
+            </div>
+
+            <div class="form-field">
+                <label for="hotel">Hotel/Stay (₹):</label>
+                <input type="number" id="hotel" name="hotel" required>
+            </div>
+
+            <div class="form-field">
+                <label for="attractions">Attractions/Activities (₹):</label>
+                <input type="number" id="attractions" name="attractions">
+            </div>
+
+            <button type="submit" class="btn">Calculate Total</button>
+        </form>
+
+        <div id="total-output" style="margin-top: 20px; font-size: 1.2em;"></div>
+    </div>
+
+    <script>
+        document.getElementById('expense-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const food = parseFloat(document.getElementById('food').value) || 0;
+            const shopping = parseFloat(document.getElementById('shopping').value) || 0;
+            const hotel = parseFloat(document.getElementById('hotel').value) || 0;
+            const attractions = parseFloat(document.getElementById('attractions').value) || 0;
+            const travel = parseFloat(document.getElementById('travel').value) || 0;
+
+            const total = food + shopping + hotel + attractions + travel;
+
+            document.getElementById('total-output').innerText = `Total Estimated Expense: ₹${total}`;
+        });
+    </script>
+</body>
+
+</html>
